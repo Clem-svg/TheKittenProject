@@ -1,7 +1,1 @@
-class ItemsController < ApplicationController
-
-  def index
-    
-  end
-
-end
+    @item = Item.new

@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+/* Jumbotron */
+.jumbotron {
+  height: 450px;
+  background-image: url(https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80);
+  background-position-y: 65%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Footer */
+footer {
+  bottom: 0px;
+}
