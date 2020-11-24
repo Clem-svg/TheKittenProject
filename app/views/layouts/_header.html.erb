@@ -23,7 +23,7 @@
         </form>
     <% else %>
       <form class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">S'inscrire / Se connecter</a>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mon profil</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" <%= link_to "Mon profil", user_path(current_user.id), :class => "nav-item nav-link" %></a>
           <a class="dropdown-item" <%= link_to "Se déconnecter", destroy_user_session_path, :class => "btn btn-outline-light", :method => 'DELETE' %></a>
