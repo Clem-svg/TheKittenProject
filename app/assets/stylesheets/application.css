@@ -27,3 +27,19 @@
 footer {
   bottom: 0px;
 }
+
+/* Avatar */
+#profile_picture {
+  vertical-align: middle;
+  width: auto;
+  height: 300px;
+  border-radius: 5%;
+  margin-bottom: 6px;
+}
+
+/* Kitten-pictures */
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
