@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
 
   def show
     @user = User.find(params[:id])
@@ -8,7 +9,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-      @user = current_user
+    @user = current_user
   end
 
   def update
