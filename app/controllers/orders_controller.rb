@@ -17,7 +17,8 @@ class OrdersController < ApplicationController
         description: 'Paiement de user.email',
         currency: 'eur',
         })
-        Order.create(cart: @cart, user_id: current_user)
+
+        Order.create(cart: @cart, user: current_user)
 
     rescue Stripe::CardError => e
       flash[:error] = e.message
@@ -34,10 +35,6 @@ class OrdersController < ApplicationController
       @stripe_amount = (@amount * 100).to_i
     end
 
-    def order_params
-      post_params = params.require(:event).permit(:start_date, :title, :duration, :description, :price, :location, :picture)
-
-    end
 
 
 end
