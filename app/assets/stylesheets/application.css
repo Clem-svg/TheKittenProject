@@ -50,3 +50,16 @@ footer {
   height: 20vw;
   object-fit: cover;
 }
+
+.card-text {
+  font-family:  'Raleway', sans-serif;
+}
+
+.text-center{
+  font-family: 'Playfair Display', serif;
+
+}
+
+.navbar-brand {
+  font-family: 'Dosis', sans-serif;
+}
