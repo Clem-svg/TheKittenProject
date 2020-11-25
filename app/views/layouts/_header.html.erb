@@ -8,8 +8,6 @@
     <% if current_user == nil %>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-      </li>                               
     </ul>
       <div class="dropdown">
         <form class="nav-item dropdown">
@@ -23,8 +21,8 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-      <a class="nav-item nav-link" <%= link_to "Mon panier", cart_path(current_user.id), :class => "nav-item nav-link" %> </a>
-      </li>                               
+      <a class="nav-item nav-link"  <%= link_to "Mon panier", cart_path(current_user.id), :class => "nav-item nav-link" %></a>
+      </li>
     </ul>
       <form class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mon profil</a>
