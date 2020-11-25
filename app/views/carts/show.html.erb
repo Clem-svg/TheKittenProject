@@ -6,4 +6,6 @@
   <% end %>
 </ul>
 
-<p> <%= link_to "Retour aux produits", root_path %> </p>
+<p> <%= link_to "Retour aux produits", root_path %>
+ <%= link_to "Payer ma commande", new_order_path(@cart.id), class: "btn btn-success" %>
+</p>
