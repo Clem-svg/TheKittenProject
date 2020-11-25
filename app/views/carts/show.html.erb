@@ -7,3 +7,5 @@
 </ul>
 
 <p> <%= link_to "Retour aux produits", root_path %> </p>
+<%= button_to "Vider le panier", @cart, method: :delete, data: {
+confirm: "Êtes-vous sûr ?" }, class: "btn btn-danger" %>
