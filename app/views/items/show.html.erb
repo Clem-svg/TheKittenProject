@@ -32,18 +32,16 @@
     <div class="col-md-6 col-lg-4 mb-4">
       <div class="">
         <div class="view zoom z-depth-2 rounded">
-          <img class="img-fluid w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/Interior/img(66).jpg" alt="Sample">
+          <img class="img-fluid w-100" src="<%= @item.image_url %>" alt="Sample">
           <a href="#!">
             <div class="mask"></div>
           </a>
         </div>
 
         <div class="text-center pt-4">
-          <h5>Seagrass basket - M</h5>
-          <h6 class="mb-3">$ 23.00</h6>
-          <button type="button" class="btn btn-primary btn-sm mr-1"><i class="fas fa-shopping-cart pr-2"></i>Add to cart</button>
-          <button type="button" class="btn btn-danger btn-sm px-3 material-tooltip-main" data-toggle="tooltip"
-            data-placement="top" title="Add to wishlist"><i class="far fa-heart"></i></button>
+          <h5><%= @item.title %></h5>
+          <h6 class="mb-3"><%= @item.price %></h6>
+          <button type="button" class="btn btn-primary btn-sm mr-1"><i class="fas fa-shopping-cart pr-2"></i>Ajouter au panier</button>
         </div>
       </div>
     </div>
@@ -51,18 +49,16 @@
     <div class="col-md-6 col-lg-4 mb-4">
       <div class="">
         <div class="view zoom z-depth-2 rounded">
-          <img class="img-fluid w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/Interior/img(23).jpg" alt="Sample">
+          <img class="img-fluid w-100" src="<%= @item.image_url %>" alt="Sample">
           <a href="#!">
             <div class="mask"></div>
           </a>
         </div>
 
         <div class="text-center pt-4">
-          <h5>Seagrass basket - L</h5>
-          <h6 class="mb-3">$ 25.00</h6>
-          <button type="button" class="btn btn-primary btn-sm mr-1"><i class="fas fa-shopping-cart pr-2"></i>Add to cart</button>
-          <button type="button" class="btn btn-danger btn-sm px-3 material-tooltip-main" data-toggle="tooltip"
-            data-placement="top" title="Add to wishlist"><i class="far fa-heart"></i></button>
+          <h5><%= @item.title %></h5>
+          <h6 class="mb-3"><%= @item.price %></h6>
+          <button type="button" class="btn btn-primary btn-sm mr-1"><i class="fas fa-shopping-cart pr-2"></i>Ajouter au panier</button>
         </div>
       </div>
     </div>
@@ -70,18 +66,16 @@
     <div class="col-md-6 col-lg-4 mb-4">
       <div class="">
         <div class="view zoom z-depth-2 rounded">
-          <img class="img-fluid w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/Interior/img(59).jpg" alt="Sample">
+          <img class="img-fluid w-100" src="<%= @item.image_url %>" alt="Sample">
           <a href="#!">
             <div class="mask"></div>
           </a>
         </div>
 
         <div class="text-center pt-4">
-          <h5>Flat seagrass basket</h5>
-          <h6 class="mb-3">$ 20.00</h6>
-          <button type="button" class="btn btn-primary btn-sm mr-1"><i class="fas fa-shopping-cart pr-2"></i>Add to cart</button>
-          <button type="button" class="btn btn-danger btn-sm px-3 material-tooltip-main" data-toggle="tooltip"
-            data-placement="top" title="Add to wishlist"><i class="far fa-heart"></i></button>
+          <h5><%= @item.title %></h5>
+          <h6 class="mb-3"><%= @item.price %></h6>
+          <button type="button" class="btn btn-primary btn-sm mr-1"><i class="fas fa-shopping-cart pr-2"></i>Ajouter au panier</button>
         </div>
       </div>
     </div>
