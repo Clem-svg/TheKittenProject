@@ -1,7 +1,4 @@
-class CartsController < ApplicationController
-    
-    rescue_from ActiveRecord::RecordNotFound, with: :cart_not_found
-    
+class CartsController < ApplicationController    
     include CurrentCart
     before_action :set_cart
 
@@ -32,12 +29,6 @@ class CartsController < ApplicationController
     def set_cart
         @cart = Cart.find_or_create_by(user_id: current_user.id)
       end
-    
-    def cart_not_found
-        redirect_to root, alert: t(".cart_not_found")
-    end
-      
-
-
+  
 end
 
