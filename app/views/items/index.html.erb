@@ -21,7 +21,7 @@
                 </h4>
                 <h5><%= item.price %> $</h5>
                 <p class="card-text"><%= item.description %></p>
-                <%= link_to "En chavoir plus", root_path, class: "btn btn-lg btn-block btn-outline-medium" %>
+                <%= link_to "En chavoir plus", item_path(item.id), class: "btn btn-lg btn-block btn-outline-medium" %>
                 <%= button_to "Ajouter au panier", cart_lines_path(item_id: item), class: "btn btn-lg btn-block btn-outline-success" %>
               </div>
               <div class="card-footer">
