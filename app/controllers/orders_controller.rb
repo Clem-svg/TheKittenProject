@@ -17,20 +17,27 @@ class OrdersController < ApplicationController
         description: 'Paiement de user.email',
         currency: 'eur',
         })
+        Order.create(cart: @cart, user_id: current_user)
 
-      rescue Stripe::CardError => e
-        flash[:error] = e.message
-        redirect_to current_user.cart
-      end
-      Order.create(user: current_user, cart: @cart)
+    rescue Stripe::CardError => e
+      flash[:error] = e.message
+      redirect_to current_user.cart
     end
+
+  end
 
     private
 
     def amounts
       @cart = Cart.find_by(user_id: current_user.id)
       @amount = @cart.total_price
-      @stripe_amount = @amount * 100
+      @stripe_amount = (@amount * 100).to_i
     end
+
+    def order_params
+      post_params = params.require(:event).permit(:start_date, :title, :duration, :description, :price, :location, :picture)
+
+    end
+
 
 end

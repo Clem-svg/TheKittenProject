@@ -35,9 +35,11 @@ class CartLinesController < ApplicationController
         @cart_line = CartLine.find(params[:id])
         @cart_line.destroy
         redirect_to root_path
-      end  
+    end
 
       private
+
+
   def cart_line_params
     params.require(:cart_line).permit(:quantity,:item_id, :cart_id)
   end
