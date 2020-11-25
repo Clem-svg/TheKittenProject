@@ -15,4 +15,14 @@ class Cart < ApplicationRecord
     product
   end
 
+  def delete_item(item)
+    product = cart_lines.find_by(item: item)
+    product.quantity -= 1
+  end
+
+  def total
+  cart_lines.to_a.sum(&:total)
+  end
+
+
 end
