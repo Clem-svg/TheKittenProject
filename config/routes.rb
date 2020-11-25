@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :carts
   resources :items
   resources :orders
+  resources :cart_lines
   resources :users do
     resources :avatars, only: [:create]
   end
