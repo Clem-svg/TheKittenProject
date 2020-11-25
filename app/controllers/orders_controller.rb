@@ -18,12 +18,12 @@ class OrdersController < ApplicationController
         currency: 'eur',
         })
 
-        Order.create(cart: @cart, user: current_user)
-
     rescue Stripe::CardError => e
       flash[:error] = e.message
       redirect_to current_user.cart
     end
+
+    generate_order(@cart)
 
   end
 
@@ -33,6 +33,16 @@ class OrdersController < ApplicationController
       @cart = Cart.find_by(user_id: current_user.id)
       @amount = @cart.total_price
       @stripe_amount = (@amount * 100).to_i
+    end
+
+
+    def set_order
+      @order = Order.find(params[:id])
+    end
+
+    def generate_order(cart)
+      @order = Order.create(user: current_user)
+      @order.save_cart(cart)
     end
 
 
