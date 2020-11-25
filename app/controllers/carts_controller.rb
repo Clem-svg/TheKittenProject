@@ -1,4 +1,4 @@
-class CartsController < ApplicationController    
+class CartsController < ApplicationController
     include CurrentCart
     before_action :set_cart
 
@@ -8,7 +8,7 @@ class CartsController < ApplicationController
     end
 
     def show
-        
+
     end
 
     def destroy
@@ -28,7 +28,7 @@ class CartsController < ApplicationController
 
     def set_cart
         @cart = Cart.find_or_create_by(user_id: current_user.id)
-      end
-  
+    end
+
 end
 

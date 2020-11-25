@@ -1,7 +1,7 @@
 <div class="container">
   <div class="text-center">
     <br>
-    <h1> Profil </h1>
+    <div class="text-success"><h1> Profil </h1></div>
     <br>
    
     <!--Avatar-->
@@ -18,8 +18,8 @@
 
       <h6 class="font-weight-light">Email: <p class="text-secondary"><%= @user.email %></p>
 
-      <%= link_to "Editer mes informations", edit_user_path(@user), :class => "btn btn-primary" %>
-      <%= link_to "Editer mes identifiants", edit_user_registration_path, :class => "btn btn-secondary" %>
+      <%= link_to "Editer mes informations", edit_user_path(@user), :class => "btn btn-success" %>
+      <%= link_to "Editer mes identifiants", edit_user_registration_path, :class => "btn btn-outline-success" %>
     </div>
   </div>
 </div>

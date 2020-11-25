@@ -1,0 +1,10 @@
+<div class='container mb-3 mt-3'>
+
+  <div class="text-center">
+    <br>
+    <h2>Votre paiement a été accepté !</h2>
+    <p>Merci, tu as bien payé <strong><%=@amount%> euros</strong> !</p>
+    <%= link_to "On retourne voir d'autres museaux ?", root_path(@event.id), class: "nav-link"  %>
+  </div>
+
+</div>
