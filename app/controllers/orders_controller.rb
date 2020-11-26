@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  include CurrentCart
   before_action :amounts
 
   def new
@@ -26,6 +27,7 @@ class OrdersController < ApplicationController
     end
 
     @order = Order.create(cart: @cart, user: @user)
+    @cart.destroy
 
   end
 
