@@ -6,8 +6,6 @@ class OrdersController < ApplicationController
   end
 
   def create
-
-
     begin
       customer = Stripe::Customer.create({
         email: params[:stripeEmail],
@@ -31,14 +29,13 @@ class OrdersController < ApplicationController
 
   end
 
-    private
+  private
 
-    def amounts
-      @user = User.find_by(id: current_user.id)
-      @cart = Cart.find_by(user_id: current_user.id)
-      @amount = @cart.total_price
-      @stripe_amount = (@amount * 100).to_i
-    end
-
+  def amounts
+    @user = User.find_by(id: current_user.id)
+    @cart = Cart.find_by(user_id: current_user.id)
+    @amount = @cart.total_price
+    @stripe_amount = (@amount * 100).to_i
+  end
 
 end
