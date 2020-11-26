@@ -3,9 +3,11 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @orders = current_user.orders
   end
 
   def create
+    flash[:notice] = "Registration needed"
   end
 
   def edit

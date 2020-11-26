@@ -1,5 +1,10 @@
 <center>
     <div class='container mb-3 mt-3'>
+
+    <% if flash[:notice] %>
+    <div class="alert alert-info"><%= flash[:notice] %></div>
+    <% end %>
+
       <h2 class="text-success">Sign in</h2>      
       <div class= "mb-3 mt-3  shadow p-3 mb-5 bg-white rounded">
       
@@ -58,4 +63,7 @@
       </div>
     </div>
   </div>
+
+
+
 </center>

@@ -11,7 +11,7 @@
         <p>=== Il n'y a pas encore d'avatar lié à cet utilisateur ===</p>
       <%end%>
 
-    <!--text-->
+    <!--Text-->
     <div class="card-body">
       <h6 class="font-weight-light">Prénom : <p class="text-secondary"><% if current_user.first_name != nil%> <%= @user.first_name%></p> <% end%>
       <h6 class="font-weight-light">Nom : <p class="text-secondary"><% if current_user.last_name != nil%> <%= @user.last_name%></p> <% end%>
@@ -21,5 +21,42 @@
       <%= link_to "Editer mes informations", edit_user_path(@user), :class => "btn btn-success" %>
       <%= link_to "Editer mes identifiants", edit_user_registration_path, :class => "btn btn-outline-success" %>
     </div>
+
+<br><br>
+    <!--Orders-->
+     <div class="text-success mb-5"><h3>Mes commandes</h3></div>
+    
+    <div class="bg-white rounded box-shadow">
+      <div class="row py-2 mb-2 mr-2">
+        <div class="col-4">
+          <p><strong>N°</strong></p>
+        </div>
+        <div class="col-4">
+          <p><strong>Date</strong></p>
+        </div>
+        <div class="col-4">
+          <p><strong>Prix</strong></p>
+        </div>
+        <hr>
+      </div>
+
+      <% @orders.each do |order| %> 
+      <hr>   
+        <div class="row">
+          <div class="col-4">
+            <p class="text-secondary"><%= order.id %></p>
+          </div>
+          <div class="col-4">
+            <p class="text-secondary"><%= order.created_at.strftime('%Y/%m/%d') %></p>
+          </div>
+          <div class="col-4">
+            <p class="text-secondary"> Miaou </p>
+          </div>
+        </div> 
+      <% end %>
+
+    <br><br><br>
+    </div>
   </div>
 </div>
+
