@@ -25,7 +25,7 @@ class OrdersController < ApplicationController
       redirect_to current_user.cart
     end
 
-    Order.create(cart: @cart, user: @user)
+    @order = Order.create(cart: @cart, user: @user)
 
   end
 
