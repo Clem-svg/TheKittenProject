@@ -1,6 +1,19 @@
 # Bicrave Ton Chaton 🐱
 
+![](app/assets/images/team.png)
+
+![](/assets/images/team.png)
+
+![](../assets/images/team.png)
+
+![](../images/team.png)
+
+![](/images/team.png)
+
 ![](images/team.png)
+
+![Alt text](relative/app/assets/images/team.png?raw=true "Title")
+
 
 ## Pitch
 Pour le projet, nous avons créé une boutique en ligne, pour un magasin de photos de chatons. La boutique affiche les différents produits, les clients peuvent s'inscrire, remplir leur panier, et payer l'objet avec Stripe pour le recevoir par email.
