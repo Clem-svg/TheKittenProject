@@ -32,7 +32,7 @@ class OrdersController < ApplicationController
     private
 
     def amounts
-      @user = User.find_by(current_user)
+      @user = User.find_by(id: current_user.id)
       @cart = Cart.find_by(user_id: current_user.id)
       @amount = @cart.total_price
       @stripe_amount = (@amount * 100).to_i

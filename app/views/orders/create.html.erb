@@ -4,6 +4,9 @@
     <br>
     <h2>Votre paiement a été accepté !</h2>
     <p>Merci, tu as bien payé <strong><%=@amount%> euros</strong> !</p>
+    <p>Un mail de confirmation a été envoyé !
+    <br>Ta commande porte le n° <%= @order.id %></p>
+
     <%= link_to "On retourne voir d'autres museaux ?", root_path, class: "nav-link"  %>
   </div>
 
