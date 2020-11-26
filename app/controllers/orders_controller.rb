@@ -5,6 +5,8 @@ class OrdersController < ApplicationController
   end
 
   def create
+
+
     begin
       customer = Stripe::Customer.create({
         email: params[:stripeEmail],
@@ -23,28 +25,18 @@ class OrdersController < ApplicationController
       redirect_to current_user.cart
     end
 
-    generate_order(@cart)
+    Order.create(cart: @cart, user: @user)
 
   end
 
     private
 
     def amounts
+      @user = User.find_by(id: current_user.id)
       @cart = Cart.find_by(user_id: current_user.id)
       @amount = @cart.total_price
       @stripe_amount = (@amount * 100).to_i
     end
-
-
-    def set_order
-      @order = Order.find(params[:id])
-    end
-
-    def generate_order(cart)
-      @order = Order.create(user: current_user)
-      @order.save_cart(cart)
-    end
-
 
 
 end
