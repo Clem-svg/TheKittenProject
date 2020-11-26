@@ -18,8 +18,7 @@
       <p class="pt-1"><%= @item.description %></p>
 
       <button type="button" class="btn btn-primary btn-md mr-1 mb-2">Acheter maintenant</button>
-      <button type="button" class="btn btn-light btn-md mr-1 mb-2"><i
-          class="fas fa-shopping-cart pr-2"></i>Ajouter au panier</button>
+      <%= button_to 'Ajouter au panier', cart_lines_path(item_id: @item), :class => "btn btn-light btn-md mr-1 mb-2" %>
     </div>
   </div>
 </section>
@@ -41,7 +40,7 @@
         <div class="text-center pt-4">
           <h5><%= @item.title %></h5>
           <h6 class="mb-3"><%= @item.price %></h6>
-          <button type="button" class="btn btn-primary btn-sm mr-1"><i class="fas fa-shopping-cart pr-2"></i>Ajouter au panier</button>
+          <%= button_to 'Ajouter au panier', cart_lines_path(item_id: @item), :class => "btn btn-primary btn-sm mr-1" %>
         </div>
       </div>
     </div>
@@ -58,7 +57,7 @@
         <div class="text-center pt-4">
           <h5><%= @item.title %></h5>
           <h6 class="mb-3"><%= @item.price %></h6>
-          <button type="button" class="btn btn-primary btn-sm mr-1"><i class="fas fa-shopping-cart pr-2"></i>Ajouter au panier</button>
+          <%= button_to 'Ajouter au panier', cart_lines_path(item_id: @item), :class => "btn btn-primary btn-sm mr-1" %>
         </div>
       </div>
     </div>
@@ -75,7 +74,7 @@
         <div class="text-center pt-4">
           <h5><%= @item.title %></h5>
           <h6 class="mb-3"><%= @item.price %></h6>
-          <button type="button" class="btn btn-primary btn-sm mr-1"><i class="fas fa-shopping-cart pr-2"></i>Ajouter au panier</button>
+          <%= button_to 'Ajouter au panier', cart_lines_path(item_id: @item), :class => "btn btn-primary btn-sm mr-1" %>
         </div>
       </div>
     </div>

@@ -7,7 +7,7 @@ class CartLinesController < ApplicationController
     end
 
     def show
-        @cart_lines = CartLine.find(params[:id])
+        @cart_lines = CartLine.all
     end
 
     def new
@@ -17,14 +17,13 @@ class CartLinesController < ApplicationController
     def edit
     end
 
-
     def create
         item = Item.find(params[:item_id])
         @cart_line = @cart.add_item(item)
 
         respond_to do |format|
             if @cart_line.save
-                format.html{redirect_to root_path}
+                format.html{redirect_to @cart_line.cart, notice: 'Cart line was successfuly created'}
             else
             redirect_to root
             end
@@ -34,7 +33,7 @@ class CartLinesController < ApplicationController
     def destroy
         @cart_line = CartLine.find(params[:id])
         @cart_line.destroy
-        redirect_to root_path
+        redirect_to cart_path(current_user.id)
       end  
 
       private
