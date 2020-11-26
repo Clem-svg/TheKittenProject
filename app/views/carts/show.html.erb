@@ -47,9 +47,11 @@
     </div>
     <div class="row mt-4 d-flex align-items-center">
         <div class="col-sm-6 order-md-2 text-right">
-            <div><a href="catalog.html" class="btn btn-primary mb-4 btn-lg pl-5 pr-5">Valide ta commande</a>
+            <div><%= link_to "Confirmer commande", new_order_path(@cart.id), class: "btn btn-success" %>
+            <br>
+            <br>
             <%= button_to "Vider le panier", @cart, method: :delete, data: {
-              confirm: "Êtes-vous sûr ?" }, class: "btn btn-danger mb-4 btn-lg pl-5 pr-5" %>
+              confirm: "Êtes-vous sûr ?" }, class: "btn btn-danger" %>
               </div>
         </div>
         <div class="col-sm-6 mb-3 mb-m-1 order-md-1 text-md-left">
@@ -58,9 +60,3 @@
     </div>
 </div>
 </section>
-
-<center>
-<p> <%= link_to "Retour aux produits", root_path %>
- <%= link_to "Confirmer commande", new_order_path(@cart.id), class: "btn btn-success" %>
-</p>
-</center>
