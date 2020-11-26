@@ -2,23 +2,6 @@
 
 ![](app/assets/images/team.png)
 
-try again 
-
-![](/assets/images/team.png)
-
-![](../assets/images/team.png)
-
-coucou
-
-![](../images/team.png)
-
-![](/images/team.png)
-
-![](images/team.png)
-
-![Alt text](relative/app/assets/images/team.png?raw=true "Title")
-
-
 ## Pitch
 Pour le projet, nous avons créé une boutique en ligne, pour un magasin de photos de chatons. La boutique affiche les différents produits, les clients peuvent s'inscrire, remplir leur panier, et payer l'objet avec Stripe pour le recevoir par email.
 
@@ -36,3 +19,5 @@ https://bicrave-ton-chaton.herokuapp.com/
 - [Benjamin SERVAL](https://github.com/BenjaminServal)
 - [Aimery CAYOL](https://github.com/Aimery-Cayol)
 - [Marie DECHAUX](https://github.com/mariedx) 
+
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
