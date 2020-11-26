@@ -32,5 +32,8 @@ class Cart < ApplicationRecord
     cart_lines.to_a.sum(&:total)
   end
 
+  def to_param
+    "#{id}-mon-panier"
+  end
 
 end

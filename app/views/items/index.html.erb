@@ -23,14 +23,14 @@
        <% @items.each_with_index do |item, i| %>
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
-              <a href="<%= item_path(item.id) %>"><img class="card-img-top" src="<%= item.image_url %>" alt=""></a>
+              <a href="<%= item_path(item) %>"><img class="card-img-top" src="<%= item.image_url %>" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="<%= item_path(item.id) %>"><%= item.title %></a>
+                  <a href="<%= item_path(item) %>"><%= item.title %></a>
                 </h4>
                 <h5><%= item.price %> €</h5>
                 <p class="card-text"><%= item.description %></p>
-                <%= link_to "En chavoir plus", item_path(item.id), class: "btn btn-lg btn-block btn-outline-medium" %>
+                <%= link_to "En chavoir plus", item_path(item), class: "btn btn-lg btn-block btn-outline-medium" %>
                 <%= button_to "Ajouter au panier", cart_lines_path(item_id: item), class: "btn btn-lg btn-block btn-outline-success" %>
               </div>
               <div class="card-footer">
