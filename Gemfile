@@ -71,3 +71,6 @@ gem 'stripe'
 
 #active storage en prod avec amazon
 gem "aws-sdk-s3", require: false
+
+#rename routes
+gem 'friendly_id', '~> 5.1'
