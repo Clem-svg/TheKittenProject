@@ -2,6 +2,7 @@ class CartLinesController < ApplicationController
     include CurrentCart
     before_action :set_cart, only: [:create]
 
+
     def index
         @cart_lines = CartLine.all
     end
@@ -42,5 +43,6 @@ class CartLinesController < ApplicationController
   def cart_line_params
     params.require(:cart_line).permit(:quantity,:item_id, :cart_id)
   end
+
 
 end

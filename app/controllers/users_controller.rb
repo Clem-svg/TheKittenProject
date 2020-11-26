@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   end
 
   def create
+    flash[:notice] = "Registration needed"
   end
 
   def edit
