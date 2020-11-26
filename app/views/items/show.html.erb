@@ -62,7 +62,7 @@
         </div>
 
         <div class="text-center pt-4">
-          <a href="<%= item_path(@item_random3.id) %>"><h5><%= @item_random2.title %></h5></a>
+          <a href="<%= item_path(@item_random3.id) %>"><h5><%= @item_random3.title %></h5></a>
           <h6 class="mb-3"><%= @item_random3.price %> €</h6>
           <%= button_to 'Ajouter au panier', cart_lines_path(item_id: @item_random3), :class => "btn btn-primary btn-md mr-1 mb-2" %>
         </div>
