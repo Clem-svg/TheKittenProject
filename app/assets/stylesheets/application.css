@@ -27,3 +27,39 @@
 footer {
   bottom: 0px;
 }
+
+/* Avatar */
+#profile_picture {
+  vertical-align: middle;
+  width: auto;
+  height: 300px;
+  border-radius: 5%;
+  margin-bottom: 6px;
+}
+
+/* Kitten-pictures_index */
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
+
+/* Kitten-pictures_show */
+#kitten_img_show {
+  width: 100%;
+  height: 20vw;
+  object-fit: cover;
+}
+
+/* font */
+.card-text {
+  font-family:  'Raleway', sans-serif;
+}
+
+.text-center{
+  font-family: 'Playfair Display', serif;
+}
+
+.navbar-brand {
+  font-family: 'Dosis', sans-serif;
+}

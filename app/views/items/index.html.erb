@@ -1,3 +1,10 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+
+
+
 <!-- Page Home Index -->
 <div class="container">
   <div class="row">
@@ -9,110 +16,29 @@
         </div>
       </div>
 
+      <h3 class="text-center mb-5">Découvrez notre collection 2020-2021, chat va vous plaire !</h3>
+
       <!--Cards -->
       <div class="row">
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Item One</a>
-              </h4>
-              <h5>$24.99</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              <%= link_to "Ajouter au panier", root_path, class: "btn btn-lg btn-block btn-outline-success" %>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Item Two</a>
-              </h4>
-              <h5>$24.99</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-              <%= link_to "Ajouter au panier", root_path, class: "btn btn-lg btn-block btn-outline-success" %>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+       <% @items.each_with_index do |item, i| %>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="<%= item_path(item.id) %>"><img class="card-img-top" src="<%= item.image_url %>" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="<%= item_path(item.id) %>"><%= item.title %></a>
+                </h4>
+                <h5><%= item.price %> €</h5>
+                <p class="card-text"><%= item.description %></p>
+                <%= link_to "En chavoir plus", item_path(item.id), class: "btn btn-lg btn-block btn-outline-medium" %>
+                <%= button_to "Ajouter au panier", cart_lines_path(item_id: item), class: "btn btn-lg btn-block btn-outline-success" %>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Item Three</a>
-              </h4>
-              <h5>$24.99</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              <%= link_to "Ajouter au panier", root_path, class: "btn btn-lg btn-block btn-outline-success" %>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Item Four</a>
-              </h4>
-              <h5>$24.99</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              <%= link_to "Ajouter au panier", root_path, class: "btn btn-lg btn-block btn-outline-success" %>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Item Five</a>
-              </h4>
-              <h5>$24.99</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-              <%= link_to "Ajouter au panier", root_path, class: "btn btn-lg btn-block btn-outline-success" %>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Item Six</a>
-              </h4>
-              <h5>$24.99</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-              <%= link_to "Ajouter au panier", root_path, class: "btn btn-lg btn-block btn-outline-success" %>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-            </div>
-          </div>
-        </div>
-
+        <% end %>
       </div>
     </div>
   </div>

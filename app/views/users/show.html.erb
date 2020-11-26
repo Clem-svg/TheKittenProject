@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="text-center">
+    <br>
+    <div class="text-success"><h1> Profil </h1></div>
+    <br>
+   
+    <!--Avatar-->
+      <%if @user.avatar.attached?%>
+        <%= image_tag @user.avatar, alt: 'avatar', id: 'profile_picture'%>
+      <%else%>
+        <p>=== Il n'y a pas encore d'avatar lié à cet utilisateur ===</p>
+      <%end%>
+
+    <!--text-->
+    <div class="card-body">
+      <h6 class="font-weight-light">Prénom : <p class="text-secondary"><% if current_user.first_name != nil%> <%= @user.first_name%></p> <% end%>
+      <h6 class="font-weight-light">Nom : <p class="text-secondary"><% if current_user.last_name != nil%> <%= @user.last_name%></p> <% end%>
+
+      <h6 class="font-weight-light">Email: <p class="text-secondary"><%= @user.email %></p>
+
+      <%= link_to "Editer mes informations", edit_user_path(@user), :class => "btn btn-success" %>
+      <%= link_to "Editer mes identifiants", edit_user_registration_path, :class => "btn btn-outline-success" %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,83 @@
+ <!--Section: Detail de la photo de chaton-->
+<section class="container mt-5">
+
+  <div class="row">
+    <div class="col-md-5 mb-4 mb-md-0">
+      <div class="view zoom z-depth-2 rounded">
+        <img class="img-fluid w-100" id="kitten_img_show" src="<%= @item.image_url %>" alt="Sample">
+        <a href="#">
+          <div class="mask"></div>
+        </a>
+      </div>
+
+    </div>
+    <div class="col-md-7">
+      <h5><%= @item.title %></h5>
+      <p class="mb-2 text-muted text-uppercase small">Storage</p>
+      <p><span class="mr-1"><strong><%= @item.price %> €</strong></span></p>
+      <p class="pt-1"><%= @item.description %></p>
+
+      <button type="button" class="btn btn-primary btn-md mr-1 mb-2">Acheter maintenant</button>
+      <%= button_to 'Ajouter au panier', cart_lines_path(item_id: @item), :class => "btn btn-light btn-md mr-1 mb-2" %>
+    </div>
+  </div>
+</section>
+
+<!--A actualiser pour jeudi en mode bonus -->
+<section class="container mt-5 text-center">
+  <h3 class="text-center pt-5 mb-0">Chat vous plaiera également</h3>
+
+  <div class="row mt-5 mb-4">
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="">
+        <div class="view zoom z-depth-2 rounded">
+          <img class="img-fluid w-100" id="kitten_img_show" src="<%= @item_random3.image_url %>" alt="Sample">
+          <a href="#">
+            <div class="mask"></div>
+          </a>
+        </div>
+
+        <div class="text-center pt-4">
+          <h5><%= @item_random3.title %></h5>
+          <h6 class="mb-3"><%= @item_random3.price %> €</h6>
+          <button type="button" class="btn btn-primary btn-sm mr-1"><i class="fas fa-shopping-cart pr-2"></i>Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="">
+        <div class="view zoom z-depth-2 rounded">
+          <img class="img-fluid w-100" id="kitten_img_show" src="<%= @item_random1.image_url %>" alt="Sample">
+          <a href="#!">
+            <div class="mask"></div>
+          </a>
+        </div>
+
+        <div class="text-center pt-4">
+          <h5><%= @item_random1.title %></h5>
+          <h6 class="mb-3"><%= @item_random1.price %> €</h6>
+          <button type="button" class="btn btn-primary btn-sm mr-1"><i class="fas fa-shopping-cart pr-2"></i>Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="">
+        <div class="view zoom z-depth-2 rounded">
+          <img class="img-fluid w-100" id="kitten_img_show" src="<%= @item_random2.image_url %>" alt="Sample">
+          <a href="#">
+            <div class="mask"></div>
+          </a>
+        </div>
+
+        <div class="text-center pt-4">
+          <h5><%= @item_random2.title %></h5>
+          <h6 class="mb-3"><%= @item_random2.price %> €</h6>
+          <button type="button" class="btn btn-primary btn-sm mr-1"><i class="fas fa-shopping-cart pr-2"></i>Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>

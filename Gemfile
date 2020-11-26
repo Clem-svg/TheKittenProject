@@ -48,6 +48,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem "letter_opener"
 end
 
 group :test do
@@ -64,3 +65,12 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'faker'
 gem 'table_print'
 gem 'devise'
+gem 'mailjet', :git => 'https://github.com/mailjet/mailjet-gem.git'
+gem "dotenv-rails"
+gem 'stripe'
+
+#active storage en prod avec amazon
+gem "aws-sdk-s3", require: false
+
+#rename routes
+gem 'friendly_id', '~> 5.1'
