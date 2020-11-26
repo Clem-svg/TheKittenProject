@@ -2,10 +2,12 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find(current_user.id)
+    @orders = current_user.orders
   end
 
   def create
+    flash[:notice] = "Registration needed"
   end
 
   def edit
@@ -13,10 +15,10 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = User.find(params[:id])
+    @user = User.find(current_user.id)
     if @user.update(user_params)
       flash[:notice] = "Profil édité !"
-      redirect_to user_path(@user.id)
+      redirect_to user_path(@user)
     else
       flash.now[:alert] = "Impossible d'éditer le profil :"
       render :edit

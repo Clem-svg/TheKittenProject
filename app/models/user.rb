@@ -18,4 +18,9 @@ class User < ApplicationRecord
     UserMailer.welcome_email(self).deliver_now
   end
 
+
+  def to_param
+    first_name
+  end
+
 end

@@ -17,8 +17,7 @@
       <p><span class="mr-1"><strong><%= @item.price %> €</strong></span></p>
       <p class="pt-1"><%= @item.description %></p>
 
-      <button type="button" class="btn btn-primary btn-md mr-1 mb-2">Acheter maintenant</button>
-      <%= button_to 'Ajouter au panier', cart_lines_path(item_id: @item), :class => "btn btn-light btn-md mr-1 mb-2" %>
+      <%= button_to 'Ajouter au panier', cart_lines_path(item_id: @item), :class => "btn btn-primary btn-md mr-1 mb-2" %>
     </div>
   </div>
 </section>
@@ -31,33 +30,13 @@
     <div class="col-md-6 col-lg-4 mb-4">
       <div class="">
         <div class="view zoom z-depth-2 rounded">
-          <img class="img-fluid w-100" id="kitten_img_show" src="<%= @item_random3.image_url %>" alt="Sample">
-          <a href="#">
-            <div class="mask"></div>
-          </a>
+          <a href="<%= item_path(@item_random1.id) %>"><img class="img-fluid w-100" id="kitten_img_show" src="<%= @item_random1.image_url %>" alt="Sample"></a>
         </div>
 
         <div class="text-center pt-4">
-          <h5><%= @item_random3.title %></h5>
-          <h6 class="mb-3"><%= @item_random3.price %> €</h6>
-          <button type="button" class="btn btn-primary btn-sm mr-1"><i class="fas fa-shopping-cart pr-2"></i>Ajouter au panier</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6 col-lg-4 mb-4">
-      <div class="">
-        <div class="view zoom z-depth-2 rounded">
-          <img class="img-fluid w-100" id="kitten_img_show" src="<%= @item_random1.image_url %>" alt="Sample">
-          <a href="#!">
-            <div class="mask"></div>
-          </a>
-        </div>
-
-        <div class="text-center pt-4">
-          <h5><%= @item_random1.title %></h5>
+          <a href="<%= item_path(@item_random1.id) %>"><h5><%= @item_random1.title %></h5></a>
           <h6 class="mb-3"><%= @item_random1.price %> €</h6>
-          <button type="button" class="btn btn-primary btn-sm mr-1"><i class="fas fa-shopping-cart pr-2"></i>Ajouter au panier</button>
+          <%= button_to 'Ajouter au panier', cart_lines_path(item_id: @item_random1), :class => "btn btn-primary btn-md mr-1 mb-2" %>
         </div>
       </div>
     </div>
@@ -65,16 +44,27 @@
     <div class="col-md-6 col-lg-4 mb-4">
       <div class="">
         <div class="view zoom z-depth-2 rounded">
-          <img class="img-fluid w-100" id="kitten_img_show" src="<%= @item_random2.image_url %>" alt="Sample">
-          <a href="#">
-            <div class="mask"></div>
-          </a>
+          <a href="<%= item_path(@item_random2.id) %>"><img class="img-fluid w-100" id="kitten_img_show" src="<%= @item_random2.image_url %>" alt="Sample"></a>
         </div>
 
         <div class="text-center pt-4">
-          <h5><%= @item_random2.title %></h5>
+          <a href="<%= item_path(@item_random2.id) %>"><h5><%= @item_random2.title %></h5></a>
           <h6 class="mb-3"><%= @item_random2.price %> €</h6>
-          <button type="button" class="btn btn-primary btn-sm mr-1"><i class="fas fa-shopping-cart pr-2"></i>Ajouter au panier</button>
+          <%= button_to 'Ajouter au panier', cart_lines_path(item_id: @item_random2), :class => "btn btn-primary btn-md mr-1 mb-2" %>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4 mb-4">
+      <div class="">
+        <div class="view zoom z-depth-2 rounded">
+          <a href="<%= item_path(@item_random3.id) %>"><img class="img-fluid w-100" id="kitten_img_show" src="<%= @item_random3.image_url %>" alt="Sample"></a>
+        </div>
+
+        <div class="text-center pt-4">
+          <a href="<%= item_path(@item_random3.id) %>"><h5><%= @item_random3.title %></h5></a>
+          <h6 class="mb-3"><%= @item_random3.price %> €</h6>
+          <%= button_to 'Ajouter au panier', cart_lines_path(item_id: @item_random3), :class => "btn btn-primary btn-md mr-1 mb-2" %>
         </div>
       </div>
     </div>
