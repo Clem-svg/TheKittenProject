@@ -12,11 +12,11 @@ class UserMailer < ApplicationMailer
 
   end
 
-  # def user_order(user, cart)
-  #   @user = user
-  #   @cart = cart
-  #   mail(to: @user.email, subject: 'Merci pour votre commande !')
-  # end
+  def user_order(user, order)
+    @user = user
+    @order = order
+    mail(to: @user.email, subject: 'Merci pour votre commande !')
+  end
 
 
 end
