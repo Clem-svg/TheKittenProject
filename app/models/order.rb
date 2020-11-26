@@ -1,5 +1,6 @@
 class Order < ApplicationRecord
   belongs_to :cart
+  belongs_to :user
 
   after_create :order_send_admin, :order_send_user
 

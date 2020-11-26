@@ -1,0 +1,62 @@
+<section class="pt-5 pb-5">
+  <div class="container">
+    <div class="row w-100">
+        <div class="col-lg-12 col-md-12 col-12">
+            <h3 class="display-5 mb-2 text-center">Un panier trop craquichou !</h3>
+            <p class="mb-5 text-center">
+            <table id="shoppingCart" class="table table-condensed table-responsive">
+                <thead>
+                    <tr>
+                        <th style="width:60%">Photo</th>
+                        <th style="width:12%">Prix</th>
+                        <th style="width:10%">Quantité</th>
+                        <th style="width:16%"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @cart.cart_lines.each do |i| %>
+                      <tr>
+                        <td data-th="Product">
+                            <div class="row">
+                                <div class="col-md-3 text-left">
+                                    <img src=<%= i.item.image_url %> class="img-fluid d-none d-md-block rounded mb-2 shadow ">
+                                </div>
+                                <div class="col-md-9 text-left mt-sm-2">
+                                    <h4><%= i.item.title %></h4>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-th="Price"><%= number_to_currency(i.total, unit: "€", separator: ",", format: "%n %u") %></td>
+                        <td data-th="Quantity">
+                            <h5 class= "text-center"><%= i.quantity %></h5>
+                        </td>
+                        <td>
+                            <div class="text-right">
+                            <h3> <%= link_to "X", cart_line_path(i.id), :method => 'DELETE' %></h3>
+                            </div>
+                        </td>
+                    </tr>
+                    <% end %>
+                </tbody>
+            </table>
+            <div class="float-right text-right">
+                <h4>Subtotal:</h4>
+                <h1><%= number_to_currency(@cart.total, unit: "€", separator: ",", format: "%n %u") %></h1>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4 d-flex align-items-center">
+        <div class="col-sm-6 order-md-2 text-right">
+            <div><%= link_to "Confirmer commande", new_order_path(@cart.id), class: "btn btn-success" %>
+            <br>
+            <br>
+            <%= button_to "Vider le panier", @cart, method: :delete, data: {
+              confirm: "Êtes-vous sûr ?" }, class: "btn btn-danger" %>
+              </div>
+        </div>
+        <div class="col-sm-6 mb-3 mb-m-1 order-md-1 text-md-left">
+            <a class="fas fa-arrow-left mr-2"> <%= link_to "Retour aux produits", root_path %>
+        </div>
+    </div>
+</div>
+</section>

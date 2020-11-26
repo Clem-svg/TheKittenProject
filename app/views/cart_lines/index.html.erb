@@ -1,0 +1,9 @@
+<h1> Panier : </h1>
+
+<ul>
+  <% @cart.cart_lines.each do |i| %>
+    <li><%= i.item.title %></li>
+  <% end %>
+</ul>
+
+<p> <%= link_to "Retour aux produits", root_path %> </p>
