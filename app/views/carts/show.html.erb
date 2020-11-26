@@ -59,4 +59,8 @@
 </div>
 </section>
 
-
+<center>
+<p> <%= link_to "Retour aux produits", root_path %>
+ <%= link_to "Confirmer commande", new_order_path(@cart.id), class: "btn btn-success" %>
+</p>
+</center>
