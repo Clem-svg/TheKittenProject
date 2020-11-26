@@ -21,6 +21,7 @@ class CartsController < ApplicationController
         end
     end
 
+
     private
     def post_params
         post_params = params.permit(:items)
